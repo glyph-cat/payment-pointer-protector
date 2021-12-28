@@ -13,10 +13,10 @@ class PaymentPointerProtector {
     this.guard = this.guard.bind(this);
     this.release = this.release.bind(this);
     this._startMetaObserver = this._startMetaObserver.bind(this);
-    this.__onMetaMutated=this.__onMetaMutated.bind(this)
+    this.__onMetaMutated = this.__onMetaMutated.bind(this)
     this._stopMetaObserver = this._stopMetaObserver.bind(this);
     this._startHeadObserver = this._startHeadObserver.bind(this);
-    this.__onHeadMutated=this.__onHeadMutated.bind(this)
+    this.__onHeadMutated = this.__onHeadMutated.bind(this)
     this._stopHeadObserver = this._stopHeadObserver.bind(this);
   }
 
@@ -31,6 +31,9 @@ class PaymentPointerProtector {
   }
 
   _startMetaObserver() {
+    // TOFIX: If there is already a payment pointer in head but the pointer
+    // provided here is different, it will result in two payment pointers in
+    // the head
     let metaTag = document.querySelector(`meta[name=${META_NAME}]`);
     // Creates a new element if tag does not already exist
     if (!metaTag) {

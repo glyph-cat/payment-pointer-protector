@@ -1,3 +1,6 @@
+# Deprecation Notice
+Payment Pointer Protector has moved into [`@glyph-cat/swiss-army-knife`](https://github.com/glyph-cat/swiss-army-knife).
+
 # Payment Pointer Protector
 
 [Web Monetization](https://webmonetization.org) is a new web standard that only requires one line of HTML code for your website to support it.
